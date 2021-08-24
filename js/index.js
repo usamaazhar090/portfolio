@@ -1,6 +1,7 @@
 var menuBtn = document.getElementById('btn-hamburger');
 var mobilenav = document.querySelector(".mobile-sidenav");
 var backdrop = document.querySelector(".backdrop");
+var navlink =document.querySelectorAll('.mobile-sidenav .nav-links')
 // to attach an event to do more than one task in the same time
 menuBtn.onclick = function(e)
 {
@@ -16,6 +17,12 @@ menuBtn.onclick = function(e)
     },100  );
 };
 backdrop.onclick = function(x){
+  closemodal()
+}
+navlink.onclick = function(y){
+  closemodal()
+}
+function closemodal() {
   menuBtn.classList.remove('animeOpenClose');
 backdrop.classList.remove("animate");
     mobilenav.classList.remove("animate");

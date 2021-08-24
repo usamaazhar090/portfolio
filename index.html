@@ -18,31 +18,38 @@
   <!-- mobile side-nav -->
   <div class="mobile-sidenav">
     <nav>
-      <div class="nav-item"><a href="#" class="nav-links">Main</a></div>
+      <div class="nav-item"><a href="#welcome-section" class="nav-links">Main</a></div>
       <div class="bottom-line"></div>
-      <div class="nav-item"><a href="#" class="nav-links">Work</a></div>
+      <div class="nav-item"><a href="#gallery" class="nav-links">Work</a></div>
       <div class="bottom-line"></div>
-      <div class="nav-item"><a href="#" class="nav-links">Contact</a></div>
+      <div class="nav-item"><a href="#contact" class="nav-links">Contact</a></div>
       <div class="bottom-line"></div>
     </nav>
   </div>
 
   <!-- header -->
   <header class="header">
-    <div class="container">
-      <nav class="main-nav">
+    <div class="main-nav">
+      <div class="container">
         <div class="brand-logo">
           <a href="http://https://codepen.io/usamaazhar090" target="_blank">UA DEVS</a>
         </div>
+        <nav>
+          <div class="nav-item p-2"><a href="#welcome-section" class="nav-links pb-1">Main</a></div>
+          <div class="nav-item p-2"><a href="#gallery" class="nav-links pb-1">Work</a></div>
+          <div class="nav-item p-2"><a href="#contact" class="nav-links pb-1">Contact</a></div>
+        </nav>
         <button id="btn-hamburger">
           <div class="line-1"></div>
           <div class="line-2"></div>
           <div class="line-3"></div>
         </button>
-      </nav>
+      </div>
+    </div>
 
       <!-- header mian content -->
-      <div class="header-content text-center pt-1">
+    <div class="header-content text-center pt-1" id="welcome-section">
+        <div class="container">
         <h1>
           Hi, I can be your next <br />
           Web
@@ -53,7 +60,7 @@
     </div>
   </header>
   <!-- gallery section -->
-  <section class="work-a text-center py-3">
+  <section class="work-a text-center py-3" id="gallery">
     <div class="container">
       <h2 class="section-title">My Work</h2>
       <div class="bottom-line"></div>
@@ -129,7 +136,7 @@
       <button class="btn-main mt-1">For More Work</button>
     </div>
   </section>
-  <footer class="py-1">
+  <footer class="py-1" id="contact">
     <div class="container">
       <div class="section-info">
         <h2 class="section-title">

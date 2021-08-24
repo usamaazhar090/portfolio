@@ -1910,7 +1910,7 @@ input[class^="btn-"]:hover {
   width: 80%;
   height: 100vh;
   min-height: 30rem;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   display: none;
@@ -1959,19 +1959,19 @@ input[class^="btn-"]:hover {
   background: -webkit-gradient(
       linear,
       left top,
-      left bottom,
+      right top,
       color-stop(10%, rgba(12, 55, 80, 0.7)),
       to(rgba(162, 213, 242, 0.6))
     ),
     url(../img/background-1.jpg) center/cover no-repeat border-box, #0c3750;
   background: -o-linear-gradient(
-      top,
+      left,
       rgba(12, 55, 80, 0.7) 10%,
       rgba(162, 213, 242, 0.6)
     ),
     url(../img/background-1.jpg) center/cover no-repeat border-box, #0c3750;
   background: linear-gradient(
-      to bottom,
+      to right,
       rgba(12, 55, 80, 0.7) 10%,
       rgba(162, 213, 242, 0.6)
     ),
@@ -1979,10 +1979,6 @@ input[class^="btn-"]:hover {
   width: 100%;
   height: 100vh;
   min-height: 30rem;
-}
-
-.header .container {
-  height: 100%;
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: 5rem auto;
@@ -1990,6 +1986,33 @@ input[class^="btn-"]:hover {
 }
 
 .header .main-nav {
+  position: fixed;
+  z-index: 50;
+  top: 0;
+  width: 100%;
+  background: -webkit-gradient(
+      linear,
+      left top,
+      right top,
+      color-stop(10%, rgba(12, 55, 80, 0.7)),
+      to(rgba(162, 213, 242, 0.6))
+    ),
+    url(../img/background-1.jpg) center/cover no-repeat border-box, #0c3750;
+  background: -o-linear-gradient(
+      left,
+      rgba(12, 55, 80, 0.7) 10%,
+      rgba(162, 213, 242, 0.6)
+    ),
+    url(../img/background-1.jpg) center/cover no-repeat border-box, #0c3750;
+  background: linear-gradient(
+      to right,
+      rgba(12, 55, 80, 0.7) 10%,
+      rgba(162, 213, 242, 0.6)
+    ),
+    url(../img/background-1.jpg) center/cover no-repeat border-box, #0c3750;
+}
+
+.header .main-nav .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2007,6 +2030,36 @@ input[class^="btn-"]:hover {
   font-family: "Recursive", sans-serif;
 }
 
+.header .main-nav nav {
+  display: none;
+}
+
+@media only screen and (min-width: 37.5rem) {
+  .header .main-nav nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 50%;
+    max-width: 20rem;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+}
+
+.header .main-nav nav .nav-links {
+  color: #a2d5f2;
+  border-bottom: transparent 1px solid;
+  font-size: 1.5rem;
+  line-height: 1.2;
+}
+
+.header .main-nav nav .nav-links:hover {
+  border-bottom: #ffc93c 1px solid;
+}
+
 .header .main-nav #btn-hamburger {
   border: 1px solid #a2d5f2;
   outline: 0;
@@ -2014,6 +2067,12 @@ input[class^="btn-"]:hover {
   border-radius: 5px;
   padding: 0.6rem;
   cursor: pointer;
+}
+
+@media only screen and (min-width: 37.5rem) {
+  .header .main-nav #btn-hamburger {
+    display: none;
+  }
 }
 
 .header .main-nav #btn-hamburger .line-1,
@@ -2045,6 +2104,9 @@ input[class^="btn-"]:hover {
 }
 
 .header-content {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
